@@ -1,9 +1,7 @@
 # Nova KeyValue
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hnassr/nova-key-value.svg?style=flat-square)](https://packagist.org/packages/hnassr/nova-key-value)
-![CircleCI branch](https://img.shields.io/circleci/project/github/hnassr/nova-key-value/master.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/hnassr/nova-key-value/master.svg?style=flat-square)](https://travis-ci.org/hnassr/nova-key-value)
-[![Quality Score](https://img.shields.io/scrutinizer/g/hnassr/nova-key-value.svg?style=flat-square)](https://scrutinizer-ci.com/g/hnassr/nova-key-value)
+
 [![Total Downloads](https://img.shields.io/packagist/dt/hnassr/nova-key-value.svg?style=flat-square)](https://packagist.org/packages/hnassr/nova-key-value)
 
 
