@@ -1,7 +1,6 @@
 # Nova KeyValue
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hnassr/nova-key-value.svg?style=flat-square)](https://packagist.org/packages/hnassr/nova-key-value)
-
 [![Total Downloads](https://img.shields.io/packagist/dt/hnassr/nova-key-value.svg?style=flat-square)](https://packagist.org/packages/hnassr/nova-key-value)
 
 
