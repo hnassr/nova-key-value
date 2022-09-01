@@ -1,8 +1,9 @@
 <template>
   <PanelItem :index="index" :field="field">
     <template v-if="field.value != null" #value>
+      <div v-if="rows.length === 0">—</div>
       <FormKeyValueTable
-        v-if="field.value.length > 0"
+        v-if="rows.length > 0"
         :edit-mode="false"
         class="overflow-hidden"
       >
