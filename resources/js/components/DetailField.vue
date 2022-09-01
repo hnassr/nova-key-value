@@ -1,29 +1,47 @@
 <template>
-    <panel-item :field="field">
-        <div v-if="field.value != null" slot="value">
-            <div v-for="row in rows" class="flex">
-                <span class="rounded-full py-2 px-0">
-                    <strong>{{ row.key }}:</strong> {{ row.value }}
-                </span>
-            </div>
+  <PanelItem :index="index" :field="field">
+    <template v-if="field.value != null" #value>
+      <FormKeyValueTable
+        v-if="field.value.length > 0"
+        :edit-mode="false"
+        class="overflow-hidden"
+      >
+        <FormKeyValueHeader
+          :key-label="field.keyLabel ?? 'Key'"
+          :value-label="field.valueLabel ?? 'Value'"
+        />
+
+        <div
+          class="bg-gray-50 dark:bg-gray-700 overflow-hidden key-value-items"
+        >
+          <FormKeyValueItem
+            v-for="(row, index) in rows"
+            :index="index"
+            :item="row"
+            :disabled="true"
+            :key="row.key"
+          />
         </div>
-    </panel-item>
+      </FormKeyValueTable>
+    </template>
+  </PanelItem>
 </template>
 
 <script>
+  
 export default {
-    props: ['resource', 'resourceName', 'resourceId', 'field'],
+  props: ["resource", "resourceName", "resourceId", "field"],
 
-    data() {
-        return {
-            rows: [],
-        }
-    },
+  data() {
+    return {
+      rows: [],
+    };
+  },
 
-    mounted() {
-        if(Array.isArray(JSON.parse(this.field.value))) {
-            this.rows = JSON.parse(this.field.value);
-        }
+  mounted() {
+    if (Array.isArray(JSON.parse(this.field.value))) {
+      this.rows = JSON.parse(this.field.value);
     }
-}
+  },
+};
 </script>

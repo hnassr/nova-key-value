@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span v-for="row in rows" class="rounded-full py-2 px-2 mr-1" style="background-color: #dae1e7;">
+        <span v-for="row in rows" :key="row.key" class="rounded-full py-2 px-2 mr-1" style="background-color: #dae1e7;">
             <strong>{{ row.key }}:</strong> {{ row.value }}
         </span>
     </div>
