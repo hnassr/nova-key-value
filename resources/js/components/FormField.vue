@@ -174,6 +174,7 @@ export default {
   watch: {
     rows: {
       handler(value) {
+        value = _.filter(value, function(row) { return row.key && row.value; });
         this.value = JSON.stringify(value);
       },
       deep: true,
