@@ -9,7 +9,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="flex" v-for="(row, index) in rows">
+            <div class="flex" v-for="(row, index) in rows" :key="index">
                 <div class="w-3/4 py-3 mr-1">
                     <input type="text"
                            class="w-full form-control form-input form-input-bordered"
