@@ -5,14 +5,12 @@ require("./nova.mix");
 mix
   .setPublicPath("dist")
   .js("resources/js/field.js", "js")
+  .postCss("resources/sass/field.css", "dist/css", [
+    require("tailwindcss"),
+  ])
   .vue({ version: 3 })
-  .nova("hnassr/nova-key-value")
-  .sass('resources/sass/field.scss', 'dist/css')
-    .webpackConfig({
-        resolve: {
-            symlinks: false
-        }
-    });
+  .nova("hnassr/nova-key-value");
+  
 
 mix.alias({
   "laravel-nova": path.join(
