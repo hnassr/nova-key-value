@@ -1,5 +1,5 @@
 Nova.booting((Vue, router) => {
-    Vue.component('index-nova-key-value', require('./components/IndexField'));
-    Vue.component('detail-nova-key-value', require('./components/DetailField'));
-    Vue.component('form-nova-key-value', require('./components/FormField'));
+    Vue.component('IndexNovaKeyValue', require('./components/IndexField').default);
+    Vue.component('DetailNovaKeyValue', require('./components/DetailField').default);
+    Vue.component('FormNovaKeyValue', require('./components/FormField').default);
 })
